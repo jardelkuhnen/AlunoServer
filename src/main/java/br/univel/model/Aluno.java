@@ -96,4 +96,30 @@ public class Aluno implements Serializable {
 			result += ", telefone: " + telefone;
 		return result;
 	}
+	
+	
+	public String toJson() {
+		
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append("{\n");
+		
+		sb.append("\tid: ").append(this.getId())
+						   .append(",\n");
+		
+		sb.append("\tnome: ").append(entreAspas(this.getNome()))
+							 .append(",\n");
+							
+		sb.append("\ttelefone/: ").append(entreAspas(this.getTelefone()))
+							      .append("\n");
+		
+		sb.append("}\n");
+		
+		return sb.toString();
+	}
+
+	private Object entreAspas(String str) {
+		
+		return "\"" + str + "\"";
+	}
 }
