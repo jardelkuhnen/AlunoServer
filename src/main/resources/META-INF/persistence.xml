@@ -6,8 +6,7 @@
 		transaction-type="JTA">
 		<description>Forge Persistence Unit</description>
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
-		<jta-data-source>java:jboss/datasources/ExampleDS</jta-data-source>
-		
+		<jta-data-source>java:/AlunoDS</jta-data-source>	
 		<class>br.univel.model.Aluno</class>
 		<exclude-unlisted-classes>false</exclude-unlisted-classes>
 		<properties>
